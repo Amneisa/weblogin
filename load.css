@@ -1,0 +1,94 @@
+body{ 
+	margin:0;
+	padding:0; 
+	font-size:20px;
+	font-family: 微软雅黑;}
+
+.main{
+	height:500px;
+	width:625px;
+	margin:0 auto}
+
+.information{
+	height:360px;
+	width:300px;
+	background:#FFF;
+	border-top-style: solid; 
+	border-top-width: 8px;
+	border-top-color: #39F;
+	position: absolute;
+	top: 130px;
+	left: 550px;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loading{
+	height:200px;
+	width:300px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	}
+
+
+.operate{
+	position: absolute;
+	top: 240px;
+	left: 240px;
+    }
+
+.button{
+	display: inline-block;
+	width:160px;
+	height:50px;
+	line-height:18px;
+	background-color: #39F;
+	border-style: solid;
+	border-radius:10px 10px 10px 10px;
+	margin:4px 0 0 15px;
+	font-size: 20px;
+	color:#FFF; 
+	transition: all 0.5s;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 40px;
+    } 
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.form-signin input[type="text"] {
+
+    }
+
+.form-signin input[type="password"] {
+
+    }
+
+a.b:link{text-decoration: none;font-size: 17px;}
+a.b:hover{color: gray;}
