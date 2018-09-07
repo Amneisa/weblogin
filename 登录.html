@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<title>登录页面</title>
+<script type="text/javascript">
+    function check(f){
+      if(f.user.value==""){
+        alert("请输入用户名！");//弹出提示框
+        f.user.focus();//文本框获取焦点
+        return false;}
+      if(f.pw.value==""){
+        alert("请输入密码！");
+        f.pw.focus();
+        return false;}
+      return false;
+    }
+</script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="load.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body style="background-image:url(img/bg.jpeg);background-position:center; background-repeat:repeat-y">
+<div class="main">
+    <div class="information">
+        <div class="topline"></div>
+        <div class="loading">
+            <p class="text-center">实验室信息登录系统</p><br>
+            <form class="form-signin" onsubmit="return check(this)" action="">
+            <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-user"></span>
+            <input placeholder="用户名" id="userid" class="form-control" type = text name = user /></div><br>
+            <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-edit"></span>
+            <input placeholder="密码" id="userpass" class="form-control" type = password name = pw />
+            </div><br>
+            <button class="button" type="submit"><span>Login </span></button><br>
+           </form>
+       </div>
+    </div> 
+</div>
+</body>
+</html>
