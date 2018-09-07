@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<title>用户中心</title>
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="react.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">  
+    function sure(f){
+    	if(f.sid.value==""){
+        alert("请输入学号！");//弹出提示框
+        return false;}
+        var  makesure=confirm("确认要删除吗？");
+        if(makesure==true)
+        {alert("删除成功!");return true;}
+        return false;
+    }
+
+    function check(f){
+      if(f.sid.value==""){
+        alert("请输入学号！");//弹出提示框
+        return false;}
+      return false;
+    }
+
+    function yes(){
+    	var  makesure=confirm("确认要更改吗？");
+        if(makesure==true)
+        {alert("更新成功!");return true;}
+        return false;
+    }
+</script> 
+
+</head>
+<body>
+<div class="top">
+    <div class="toptitle">实验室信息登录系统</div>
+    <div class="quit"><button type="button" class="btn btn-info" onclick="window.location.href='file:///E:/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%91%A8%E8%AE%B0/%E7%AC%AC14%E5%91%A8/%E7%99%BB%E5%BD%95.html'"><span class="glyphicon glyphicon-log-out"></span> 退出系统</button></div>
+</div>
+<div class="left">
+    <div class="head">
+    <img src="img/head.jpg" width="140" height="140" class="img-circle">
+    </div>
+    <div class="information">
+        <table class="table table-hover table-striped table-condensed ">
+        <caption>个人信息</caption>
+        <tbody>
+        <tr>
+            <td>姓名</td>
+            <td><span id="sname" ></span></td>
+        </tr>
+        <tr>
+            <td>工号</td>
+            <td><span id="sid" ></span></td>
+        </tr>
+        <tr>
+            <td>手机</td>
+            <td><span id="sphone" ></span></td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td><span id="semail" ></span></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>    
+</div>
+<div class="right">
+    <ul id="myTab" class="nav nav-tabs">
+	<li class="active"><a href="#实验室公告栏" data-toggle="tab">实验室公告栏</a>
+	</li>
+    <li><a href="#学生信息" data-toggle="tab">学生信息</a></li>
+	<li><a href="#修改信息" data-toggle="tab">修改信息</a></li>
+	<li><a href="#增加信息" data-toggle="tab">增加信息</a></li>
+	<li><a href="#查询与删除" data-toggle="tab">查询与删除</a></li>
+	</ul>
+	<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="实验室公告栏">
+	    <div class="news">
+        <br>
+            <div class="new">
+                <h2>
+                     2017.6.1
+                </h2>
+
+                祝各位实验室的同学们儿童节快乐！ 
+            </div>
+            <div class="new">
+                <h2>
+                    2017.5.29
+                </h2>
+            
+                今日校园电力系统维护，上午9:30~11:30实验室将停电两小时。各位老师同学请注意好保存资料。在停电前关闭电器电源。
+            </div>
+            <div class="new">
+                <h2>
+                    2017.5.26
+                </h2>
+
+                离暑假还有两个月，请大家充分利用实验室的开放时间抓紧完成各科目的大作业和实验，实验室从这周起每周六和周日的下午3:30~5:30将额外开放！
+            </div>  
+        </div>
+    </div>
+    <div class="tab-pane fade" id="学生信息">
+        <p>学生名单</p>
+    </div>
+	<div class="tab-pane fade" id="修改信息">
+		<table class="table table-bordered table-condensed">
+        <caption>学生信息</caption>
+        <thead>
+        <tr>
+            <th>项目</th>
+            <th>修改内容</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>姓名</td>
+            <td><input class="form-control" type = text name = sname ></td>
+        </tr>
+        <tr>
+            <td>学号</td>
+            <td><input class="form-control" type = text name = sid ></td>
+        </tr>
+        <tr>
+            <td>老师</td>
+            <td><input class="form-control" type = text name = steacher ></td>
+        </tr>
+        <tr>
+            <td>手机</td>
+            <td><input class="form-control" type = text name = sphone ></td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td><input class="form-control" type = text name = semail ></td>
+        </tr>
+        </tbody>
+        </table>
+        <button type="button" type="submit" class="btn btn-success" onclick="yes()"><span class="glyphicon glyphicon-refresh"></span> 修改</button>
+	</div>
+	<div class="tab-pane fade" id="增加信息">
+		<table class="table table-condensed table-bordered">
+        <thead>
+        <tr>
+            <th>项目</th>
+            <th>内容</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>姓名</td>
+            <td><input class="form-control" type = text name = sname ></td>
+        </tr>
+        <tr>
+            <td>学号</td>
+            <td><input class="form-control" type = text name = sid ></td>
+        </tr>
+        <tr>
+            <td>老师</td>
+            <td><input class="form-control" type = text name = steacher ></td>
+        </tr>
+        <tr>
+            <td>手机</td>
+            <td><input class="form-control" type = text name = sphone ></td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td><input class="form-control" type = text name = semail ></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input class="form-control" type = text name = spassword ></td>
+        </tr>
+        </tbody>
+        </table>
+        <button type="button" type="submit" class="btn btn-success" onclick="yes()"><span class="glyphicon glyphicon-repeat"></span> 添加</button>
+	</div>
+	<div class="tab-pane fade" id="查询与删除">
+		<div class="revise">
+		    <form class="form-signin" onsubmit="return check(this)" action="">
+            <div class="input-group">
+            <input type="text" class="form-control" name="sid"><span class="input-group-btn"><button class="btn btn-default" type="submit" >查询学号</button></span>
+            </div>输入学号可以查询个人信息<br><br><br><br>
+            </form>
+            <form class="form-signin" onsubmit="return sure(this)" action="">
+            <div class="input-group">
+            <input type="text" class="form-control" name="sid"><span class="input-group-btn"><button class="btn btn-default" type="submit" >删除学号</button></span>
+            </div>输入学号会完全删除信息
+            </form>
+        </div>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>
